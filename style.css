@@ -1,0 +1,87 @@
+    * { scroll-behavior: smooth; }
+
+    .hero-image {
+      background: url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80') center/cover no-repeat;
+      border-radius: 20px;
+    }
+
+    .kos-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(37,99,235,0.13); }
+    .kos-card { transition: all 0.3s cubic-bezier(.4,0,.2,1); }
+
+    .tag-btn { transition: all 0.2s; }
+    .tag-btn:hover, .tag-btn.active { background: #2563EB; color: #fff; border-color: #2563EB; }
+
+    .map-placeholder {
+      background: #e8f0fe url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%23c7d8f8' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='%23f0f6ff'/%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E");
+      position: relative;
+    }
+
+    .fade-in { animation: fadeIn 0.7s ease both; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:none; } }
+
+    .slide-in { animation: slideIn 0.5s ease both; }
+    @keyframes slideIn { from { opacity:0; transform:translateX(-20px); } to { opacity:1; transform:none; } }
+
+    .testimonial-card { transition: box-shadow 0.25s; }
+    .testimonial-card:hover { box-shadow: 0 12px 32px rgba(37,99,235,0.10); }
+
+    .nav-link { position: relative; }
+    .nav-link.active::after, .nav-link:hover::after {
+      content: ''; display: block; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 2px; background: #2563EB; border-radius: 2px;
+    }
+
+    .search-bar { box-shadow: 0 8px 32px rgba(37,99,235,0.10); }
+    .hero-badge { animation: fadeIn 0.5s ease both; }
+
+    .stat-item { border-right: 1px solid #e5e7eb; }
+    .stat-item:last-child { border-right: none; }
+
+    /* Mobile menu */
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; max-height: 0; overflow: hidden; opacity: 0; }
+    #mobile-menu.open { max-height: 300px; opacity: 1; }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* Star rating */
+    .stars { color: #FBBF24; }
+
+    /* CTA gradient */
+    .cta-section {
+      background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 60%, #3B82F6 100%);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #93c5fd; border-radius: 3px; }
+
+    .map-pin {
+      width: 36px; height: 36px; background: #2563EB; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 16px; box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+      cursor: pointer; transition: transform 0.2s;
+    }
+    .map-pin:hover { transform: scale(1.15); }
+
+    .price-tag { color: #F97316; font-weight: 700; }
+
+    /* Dots for testimonial */
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #CBD5E1; transition: background 0.2s; }
+    .dot.active { background: #2563EB; width: 24px; border-radius: 4px; }
+
+    /* Glassmorphism card on map */
+    .glass-card {
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+      backdrop-filter: blur(12px);
+    }
+
+    .kos-image { transition: transform 0.4s ease; }
+    .kos-card:hover .kos-image { transform: scale(1.06); }
+
+    .heart-btn { transition: color 0.2s, transform 0.2s; }
+    .heart-btn:hover { color: #EF4444; transform: scale(1.2); }
+    .heart-btn.liked { color: #EF4444; }
